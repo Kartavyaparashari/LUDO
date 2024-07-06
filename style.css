@@ -207,7 +207,11 @@
     }
 }
 @media (max-width: 510px) {
+  .ch-heading{
   
+    font-weight: 600;
+    font-size: 38px;
+  }
   .btns{
       width: 100%;
       height:130px;
