@@ -13,7 +13,7 @@
   text-align-last: center;
   justify-content: center;
   padding:0px 170px 0px 170px;
-  border:1px black solid;
+  /* border:1px black solid; */
 }
 .btn-cont{
   width:100%;   
@@ -21,16 +21,23 @@
   display:grid;
   grid-gap: 291px;
 }
-.upper-btn{
+/* .upper-btn{
   border:green 3px solid;
 }
 
 .lower-btn{
   border:yellow 3px solid;
-}
+} */
 .btnn{
-  border:2px skyblue solid;
+  /* border:5px rgba(0, 0, 0, 0.5) solid; */
   height:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dice-img{
+  width:70px;
+  height:70px;
 }
 
 #gameBoard {
@@ -49,7 +56,7 @@
   box-sizing: border-box;
   
 }
-#bg-video {
+#bg-img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,7 +125,6 @@
   #sound-on-icon {
     top: .5rem;
   }
-  
   .switch {
     position: relative;
     display: inline-block;
@@ -216,12 +222,20 @@
   display: inline-block;
   justify-content: center;
     width: 100%;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     height: 600px;
     padding-left: 9%;
     padding-right: 9%;
   }
-
+.dice-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:90px;
+  height:90px;
+  border:5px rgba(0, 0, 0, 0.5) solid;
+  border-radius: 20px;
+}
 
 
   /* for responsive website */
@@ -237,7 +251,7 @@
   .btns{
       width: 100%;
       height:130px;
-      border: 1px green solid;
+      /* border: 1px green solid; */
     }
     .ludo-home{
         flex-direction: column;
@@ -268,7 +282,6 @@
       grid-template-columns: 1fr 1fr;
     }
     .btnn{
-      border:2px skyblue solid;
       height:100px;
     }
     #gameBoard {
