@@ -32,7 +32,6 @@
                               <path fill="none" d="M13.724,1.453c-0.345-0.15-0.746,0.012-0.895,0.358c-0.148,0.346,0.013,0.745,0.358,0.894c2.928,1.256,4.819,4.122,4.819,7.303c0,3.171-1.886,6.031-4.802,7.289c-0.346,0.149-0.505,0.55-0.356,0.894c0.112,0.258,0.362,0.412,0.626,0.412c0.09,0,0.181-0.019,0.269-0.056c3.419-1.474,5.626-4.826,5.626-8.54C19.368,6.282,17.152,2.923,13.724,1.453z"></path>
               </svg>
       </span>
-      
     </label>
   </div> 
       <audio id="audio" src="sounds/main.wav" autoplay="false" ></audio>
@@ -40,20 +39,20 @@
       <audio id="diceAudio" src="sounds/dice_roll-96878.mp3" type="audio/mpeg" ></audio>
       <div class="container user-ch-box">   
         <h1 class="ch-heading">Select Players</h1>
-        <button class="twoPlayerBtn  ch-btn" id="btn">TWO PLAYER</button>
-        <button class="threePlayerBtn ch-btn"id="btn">THREE PLAYER</button>
+        <button class="twoPlayerBtn  ch-btn" id="btn" onclick="player2()">TWO PLAYER</button>
+        <button class="threePlayerBtn ch-btn"id="btn" onclick="player3()">THREE PLAYER</button>
         <button class="fourPlayerBtn ch-btn"id="btn">FOUR PLAYER</button>
     </div>
     <div class="ludo-home d-none">
       <div class="contnr d-none">
         <div class="upper-btn btn-cont">
-          <div class="player4-dice-btn btnn"><div class="dice-cont"><img src="" class="dice-img" id="dice-img1"></div></div>
-          <div class="player2-dice-btn btnn"><div class="dice-cont"><img src="" class="dice-img" id="dice-img2"></div></div>
+          <div class="player4-dice-btn btnn"><div class="dice-cont i1"><img src="" class="dice-img" id="dice-img1"></div></div>
+          <div class="player2-dice-btn btnn"><div class="dice-cont i2"><img src="" class="dice-img" id="dice-img2"></div></div>
         </div>
         <div id="gameBoard"></div>
         <div class="lower-btn btn-cont">
-          <div class="player1-dice-btn btnn"><div class="dice-cont"><img src="" class="dice-img" id="dice-img3"></div></div>
-          <div class="player3-dice-btn btnn"><div class="dice-cont"><img src="" class="dice-img" id="dice-img4"></div></div>
+          <div class="player1-dice-btn btnn"><div class="dice-cont i3"><img src="" class="dice-img" id="dice-img3"></div></div>
+          <div class="player3-dice-btn btnn"><div class="dice-cont i4"><img src="" class="dice-img" id="dice-img4"></div></div>
         </div>
       </div>
     </div>
