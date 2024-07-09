@@ -24,9 +24,7 @@ document.querySelectorAll(".ch-btn")[i].addEventListener("click" , function (){
  document.querySelectorAll(".ch-btn")[i].addEventListener('focus', function() {
         btnAudio.currentTime = 0; 
         btnAudio.play();
-      });
-   
-    
+      });  
 }
 const dice=document.querySelectorAll(".dice-img").length;
 for(let n=0; n<dice; n++){
@@ -62,6 +60,7 @@ function setupBoard() {
     for (let i = 0; i < 225; i++) { 
         const cell = document.createElement('div');
         cell.className = 'cell';
+        
         if (Math.floor(i / 15) < 6 && i % 15 < 6) {
             cell.style.backgroundColor = 'red';
         } else if (Math.floor(i / 15) < 6 && i % 15 >= 9) {
@@ -105,6 +104,30 @@ function setupBoard() {
         else if (Math.floor(i / 15) >= 6 && i % 15 >=9 && (i / 15) < 9 ) {
             cell.style.border = '1px solid black';
         }
+        else if(i===16 || i===19 || i===61 ||  i===64 || i===25 || i===28 || i===70 || i===73 || i===151 ||
+             i===154 || i===160 || i===163 || i===196 || i===199 || i===205 || i===208 ){
+            const innerDiv = document.createElement('div');
+            innerDiv.style.backgroundColor = 'white';
+            innerDiv.style.borderRadius = '30px';
+            innerDiv.style.width = '100%';
+            innerDiv.style.height = '100%';
+            cell.appendChild(innerDiv);
+            const redGoti = document.querySelector('.red-goti').cloneNode(true);
+            redGoti.style.zIndex = '2';
+            redGoti.style.display="block";
+           if(Math.floor(i / 15) < 6 && i % 15 < 6){
+             redGoti.style.color='red';
+           }
+            else if (Math.floor(i / 15) < 6 && i % 15 >= 9){
+                redGoti.style.color='blue';
+             }
+             else if (Math.floor(i / 15) >= 9 && i % 15 < 6) {
+                redGoti.style.color='green';
+            } else if (Math.floor(i / 15) >= 9 && i % 15 >= 9) {
+                redGoti.style.color='yellow';
+            }
+             innerDiv.appendChild(redGoti);
+        }
         board.appendChild(cell);
     }
 }
@@ -116,6 +139,5 @@ function setupBoard() {
    function player3(){
     document.querySelector(".i3").classList.toggle("d-none");
    }
-   
     
      
