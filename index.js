@@ -81,7 +81,7 @@ const middleGridCells = document.querySelectorAll('.middlegrid .cell');
 middleGridCells[1].style.backgroundColor='red';
 const img = document.createElement('img');
 img.src = 'images/nautical-star-1144619_640.webp';
-img.style.height = '30px'; 
+img.style.height = '28px'; 
 middleGridCells[1].appendChild(img);
 const img4 = document.createElement('img');
 img4.src = 'images/nautical-star-1144619_640.webp';
@@ -137,9 +137,16 @@ topGridCells1[12].style.backgroundColor = 'green';
 }
     //   for dice roll
    function player2(){
-         document.querySelector(".i1").classList.toggle("d-none");
-          document.querySelector(".i4").classList.toggle("d-none");
+    const randomplayer=Math.floor(Math.random()*2 + 1);
+         document.querySelector(`.i` + randomplayer).classList.toggle("d-none");
+         if(randomplayer===1){
+            document.querySelector(".i4").classList.toggle("d-none");
+         }else{
+            document.querySelector(".i3").classList.toggle("d-none");
+         }
+          
    }
+ 
    function player3(){
     document.querySelector(".i3").classList.toggle("d-none");
    }
