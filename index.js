@@ -81,11 +81,11 @@ const middleGridCells = document.querySelectorAll('.middlegrid .cell');
 middleGridCells[1].style.backgroundColor='red';
 const img = document.createElement('img');
 img.src = 'images/nautical-star-1144619_640.webp';
-img.style.height = '30px'; 
+img.style.height = '28px'; 
 middleGridCells[1].appendChild(img);
 const img4 = document.createElement('img');
 img4.src = 'images/nautical-star-1144619_640.webp';
-img4.style.height = '30px'; 
+img4.style.height = '28px'; 
 middleGridCells[14].appendChild(img4);
 for (let i = 7; i <= 11; i++) {
     middleGridCells[i].style.backgroundColor = 'red';
@@ -96,11 +96,11 @@ const middleGridCells1 = secondMiddleGridDiv.querySelectorAll('.cell');
 middleGridCells1[16].style.backgroundColor = 'rgb(255, 208, 0)';
 const img1 = document.createElement('img');
 img1.src = 'images/nautical-star-1144619_640.webp';
-img1.style.height = '30px'; 
+img1.style.height = '28px'; 
 middleGridCells1[16].appendChild(img1);
 const img5 = document.createElement('img');
 img5.src = 'images/nautical-star-1144619_640.webp';
-img5.style.height = '30px'; 
+img5.style.height = '28px'; 
 middleGridCells1[3].appendChild(img5);
 
 for (let i = 6; i <= 10; i++) {
@@ -110,11 +110,11 @@ const topGridCells = document.querySelectorAll('.topgrid .cell');
 topGridCells[5].style.backgroundColor='blue';
 const img2 = document.createElement('img');
 img2.src = 'images/nautical-star-1144619_640.webp';
-img2.style.height = '30px'; 
+img2.style.height = '28px'; 
 topGridCells[5].appendChild(img2);
 const img6 = document.createElement('img');
 img6.src = 'images/nautical-star-1144619_640.webp';
-img6.style.height = '30px'; 
+img6.style.height = '28px'; 
 topGridCells[6].appendChild(img6);
 for (let i = 4; i <= 16; i+=3) {
     topGridCells[i].style.backgroundColor = 'blue';
@@ -124,11 +124,11 @@ const topGridCells1 = topGridDiv.querySelectorAll('.cell');
 topGridCells1[12].style.backgroundColor = 'green';
 const img3 = document.createElement('img');
 img3.src = 'images/nautical-star-1144619_640.webp';
-img3.style.height = '30px'; 
+img3.style.height = '28px'; 
 topGridCells1[12].appendChild(img3);
 const img7 = document.createElement('img');
 img7.src = 'images/nautical-star-1144619_640.webp';
-img7.style.height = '30px'; 
+img7.style.height = '28px'; 
 topGridCells1[11].appendChild(img7);
 for (let i = 1; i <= 13; i+=3) {
     topGridCells1[i].style.backgroundColor = 'green'; 
