@@ -56,80 +56,84 @@ document.querySelectorAll(".dice-cont")[n].addEventListener("click" , function (
 // document.getElementById('btn').addEventListener('click', setupBoard);
 const colors = ['red', 'blue', 'green', 'yellow'];
 function setupBoard() {
-    const board = document.getElementById('gameBoard');
-    for (let i = 0; i < 225; i++) { 
+    
+const topGridContainers = document.querySelectorAll('.topgrid');
+
+topGridContainers.forEach(container => {
+    for (let i = 0; i < 18; i++) { 
         const cell = document.createElement('div');
-        cell.className = 'cell';
-        
-        if (Math.floor(i / 15) < 6 && i % 15 < 6) {
-            cell.style.backgroundColor = 'red';
-        } else if (Math.floor(i / 15) < 6 && i % 15 >= 9) {
-            cell.style.backgroundColor = 'blue'; 
-        } else if (Math.floor(i / 15) >= 9 && i % 15 < 6) {
-            cell.style.backgroundColor = 'green';
-        } else if (Math.floor(i / 15) >= 9 && i % 15 >= 9) {
-            cell.style.backgroundColor = 'yellow'; 
-        } else if (
-            (Math.floor(i / 15) >= 6 && Math.floor(i / 15) < 9) &&
-            (i % 15 >= 6 && i % 15 < 9) &&
-            !cell.style.backgroundColor
-        ) {
-            cell.style.backgroundColor = 'skyblue';
-        } else if (Math.floor(i / 15) === 6 && i % 15 === 1) {
-            cell.style.backgroundColor = 'red';
-        } else if (Math.floor(i / 15) === 7 && i % 15 <= 5 && i % 15 >= 1) {
-            cell.style.backgroundColor = 'red';
-        } else if (Math.floor(i / 15) === 1 && i % 15 === 8) {
-            cell.style.backgroundColor = 'blue';
-        } else if (Math.floor(i / 15) <= 5 && i % 15 === 7 && Math.floor(i / 15) >= 1) {
-            cell.style.backgroundColor = 'blue';
-        } else if (Math.floor(i / 15) === 8 && i % 15 === 13) {
-            cell.style.backgroundColor = 'yellow';
-        } else if (Math.floor(i / 15) === 7 && i % 15 <= 13 && i % 15 >= 9) {
-            cell.style.backgroundColor = 'yellow';
-        } else if (Math.floor(i / 15) === 13 && i % 15 === 6) {
-            cell.style.backgroundColor = 'green';
-        } else if (Math.floor(i / 15) <= 13 && i % 15 === 7 && Math.floor(i / 15) >= 9) {
-            cell.style.backgroundColor = 'green';
-        }
-        if (Math.floor(i / 15) <= 5 && i % 15 >= 6 && i%15 <=8) {
-            cell.style.border = '1px solid black';
-        }
-       else if (Math.floor(i / 15) <= 14 && i % 15 >= 6 && i%15 <=8 && (i / 15) >= 9) {
-            cell.style.border = '1px solid black';
-        }
-        else if (Math.floor(i / 15) >= 6 && i % 15 <=5 && (i / 15) < 9 ) {
-            cell.style.border = '1px solid black';
-        }
-        else if (Math.floor(i / 15) >= 6 && i % 15 >=9 && (i / 15) < 9 ) {
-            cell.style.border = '1px solid black';
-        }
-        else if(i===16 || i===19 || i===61 ||  i===64 || i===25 || i===28 || i===70 || i===73 || i===151 ||
-             i===154 || i===160 || i===163 || i===196 || i===199 || i===205 || i===208 ){
-            const innerDiv = document.createElement('div');
-            innerDiv.style.backgroundColor = 'white';
-            innerDiv.style.borderRadius = '30px';
-            innerDiv.style.width = '100%';
-            innerDiv.style.height = '100%';
-            cell.appendChild(innerDiv);
-            const redGoti = document.querySelector('.red-goti').cloneNode(true);
-            redGoti.style.zIndex = '2';
-            redGoti.style.display="block";
-           if(Math.floor(i / 15) < 6 && i % 15 < 6){
-             redGoti.style.color='red';
-           }
-            else if (Math.floor(i / 15) < 6 && i % 15 >= 9){
-                redGoti.style.color='blue';
-             }
-             else if (Math.floor(i / 15) >= 9 && i % 15 < 6) {
-                redGoti.style.color='green';
-            } else if (Math.floor(i / 15) >= 9 && i % 15 >= 9) {
-                redGoti.style.color='yellow';
-            }
-             innerDiv.appendChild(redGoti);
-        }
-        board.appendChild(cell);
+        cell.classList.add('cell');
+        cell.style.border='1px solid black'
+        container.appendChild(cell);
     }
+});
+const middleGridContainers = document.querySelectorAll('.middlegrid');
+
+middleGridContainers.forEach(container => {
+    for (let i = 0; i < 18; i++) {
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        cell.style.border='1px solid black'
+        container.appendChild(cell);
+    }
+});
+const middleGridCells = document.querySelectorAll('.middlegrid .cell');
+middleGridCells[1].style.backgroundColor='red';
+const img = document.createElement('img');
+img.src = 'images/nautical-star-1144619_640.webp';
+img.style.height = '30px'; 
+middleGridCells[1].appendChild(img);
+const img4 = document.createElement('img');
+img4.src = 'images/nautical-star-1144619_640.webp';
+img4.style.height = '30px'; 
+middleGridCells[14].appendChild(img4);
+for (let i = 7; i <= 11; i++) {
+    middleGridCells[i].style.backgroundColor = 'red';
+}
+const secondMiddleGridDiv = document.querySelectorAll('.middlegrid')[1];
+
+const middleGridCells1 = secondMiddleGridDiv.querySelectorAll('.cell');
+middleGridCells1[16].style.backgroundColor = 'rgb(255, 208, 0)';
+const img1 = document.createElement('img');
+img1.src = 'images/nautical-star-1144619_640.webp';
+img1.style.height = '30px'; 
+middleGridCells1[16].appendChild(img1);
+const img5 = document.createElement('img');
+img5.src = 'images/nautical-star-1144619_640.webp';
+img5.style.height = '30px'; 
+middleGridCells1[3].appendChild(img5);
+
+for (let i = 6; i <= 10; i++) {
+    middleGridCells1[i].style.backgroundColor = 'rgb(255, 208, 0)'; 
+}
+const topGridCells = document.querySelectorAll('.topgrid .cell');
+topGridCells[5].style.backgroundColor='blue';
+const img2 = document.createElement('img');
+img2.src = 'images/nautical-star-1144619_640.webp';
+img2.style.height = '30px'; 
+topGridCells[5].appendChild(img2);
+const img6 = document.createElement('img');
+img6.src = 'images/nautical-star-1144619_640.webp';
+img6.style.height = '30px'; 
+topGridCells[6].appendChild(img6);
+for (let i = 4; i <= 16; i+=3) {
+    topGridCells[i].style.backgroundColor = 'blue';
+}
+const topGridDiv = document.querySelectorAll('.topgrid')[1];
+const topGridCells1 = topGridDiv.querySelectorAll('.cell');
+topGridCells1[12].style.backgroundColor = 'green';
+const img3 = document.createElement('img');
+img3.src = 'images/nautical-star-1144619_640.webp';
+img3.style.height = '30px'; 
+topGridCells1[12].appendChild(img3);
+const img7 = document.createElement('img');
+img7.src = 'images/nautical-star-1144619_640.webp';
+img7.style.height = '30px'; 
+topGridCells1[11].appendChild(img7);
+for (let i = 1; i <= 13; i+=3) {
+    topGridCells1[i].style.backgroundColor = 'green'; 
+}
+topGridCells1[12].style.backgroundColor = 'green';
 }
     //   for dice roll
    function player2(){
