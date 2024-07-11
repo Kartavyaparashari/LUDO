@@ -137,9 +137,16 @@ topGridCells1[12].style.backgroundColor = 'green';
 }
     //   for dice roll
    function player2(){
-         document.querySelector(".i1").classList.toggle("d-none");
-          document.querySelector(".i4").classList.toggle("d-none");
+    const randomplayer=Math.floor(Math.random()*2 + 1);
+         document.querySelector(`.i` + randomplayer).classList.toggle("d-none");
+         if(randomplayer===1){
+            document.querySelector(".i4").classList.toggle("d-none");
+         }else{
+            document.querySelector(".i3").classList.toggle("d-none");
+         }
+          
    }
+ 
    function player3(){
     document.querySelector(".i3").classList.toggle("d-none");
    }
